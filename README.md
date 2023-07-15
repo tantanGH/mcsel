@@ -15,7 +15,7 @@ MACSデータファイルのセレクタ兼ローダです。「まくせる」�
  - プレイリスト対応
  - リピート再生対応
 
-<img src='images/mcsel1.png' width='800px'/>
+<img src='images/mcsel4.png' width='800px'/>
 
 ---
 
@@ -109,7 +109,7 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 
 コマンドラインオプションもいくつかありますが、詳細は `-h` で表示されるヘルプを参照してください。
 
-<img src='images/mcsel2.png' width='800px'/>
+<img src='images/mcsel3.png' width='800px'/>
 
 起動直後の画面は上記のようになります。
 
@@ -160,4 +160,4 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 
 ## History
 
-* 0.4.0 (2023/07/16) ... 初版
+* 0.3.5 (2023/07/16) ... 初版
