@@ -138,6 +138,17 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 - MACSplay.x (カタさん)
 - MCSP.X (みゆ🌹ฅ^•ω•^ฅ さん)
 
+その他挙げきれないほどの素晴らしいソフトウェア・ハードウェアにお世話になっています。ありがとうございます。
+
+---
+
+## 動作確認環境
+
+以下でのみ動作確認しています。
+
+- X68000XVI 実機 + PhantomX (68030モード・ハイメモリ384MB・VDISK) + Raspberry Pi 4B + Mercury Unit V3 + PCM8PP.X
+- XEiJ (68060モード・ハイメモリ768MB・HFS) + PCM8A.X
+
 ---
 
 ## History
