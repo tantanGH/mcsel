@@ -77,5 +77,6 @@ MCSELxxx.ZIP をダウンロードして、MCSEX.X をパスの通ったディ�
 - MCSEL_LIST_PATH ... MACSプレイリストファイル(*.MCL)を格納してあるディレクトリ名。1つだけ指定可能。
 
 例：
+
     SET MCSEL_DATA_PATH=G:\MCS_DATA;H:\MCS_DATA;I:\MCS_DATA;J:\MCS_DATA;K:\MCS_DATA
     SET MCSEL_LIST_PATH=D:\MCS_LIST
