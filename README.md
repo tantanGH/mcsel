@@ -159,6 +159,34 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ---
 
+## Raspberry Pi を使った16bitPCM外部同期再生
+
+MCSEL.Xは `s44rasp` 及び `s44raspd` を使った16bitPCM外部同期再生に対応しています。
+以下のような場合にメリットがあります。
+
+- Mercury Unitを所有していないが、16bitPCM対応データを元の品質のまま再生したい場合
+- Mercury Unitを所有しているが、フレームドロップ率を最小限にしたい場合(MACSDRVのPCMミュートモードを使って再生するためにフレーム落ちが改善します)
+
+外部同期演奏を行う場合は、Raspberry Pi とX680x0本体をRS232C-USBクロスケーブルで接続した上で、Raspberry Pi側に以下のソフトウェアを導入する必要があります。
+
+- [s44rasp](https://github.com/tantanGH/s44rasp/)
+- [s44raspd](https://github.com/tantanGH/s44rasp-x68k/)
+
+さらに、あらかじめ再生するものと同じ .mcs ファイルをラズパイ側に転送しておく必要があります。日本語ファイル名は利用できません。
+
+例えば `hogehoge.mcs` を data/mcs/ 以下にコピーしておき、
+
+        nohup s44raspd -d /dev/ttyUSB0 -o -a hw:2,0 data/mcs &
+
+としてバックグラウンドで s44raspd を起動した状態で、RS232C - USB クロス接続した PhantomX 実機上から
+
+        mcsel -p .
+
+とすることで同期再生が可能です。ただし、一時停止など、再生開始とESCでのアボート以外の操作には対応していません。
+また、タイミングには微妙にずれがあります。
+
+---
+
 ## Special Thanks
 
 以下のMACSプレーヤの仕様および実装を参考にさせて頂きました。この場を借りてお礼申し上げます。
@@ -182,5 +210,6 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.3.7 (2023/07/16) ... s44rasp 対応機能を有効化
 * 0.3.6 (2023/07/16) ... 特殊環境用に -f オプション追加
 * 0.3.5 (2023/07/16) ... 初版
