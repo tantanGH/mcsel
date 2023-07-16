@@ -174,7 +174,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 以下でのみ動作確認しています。
 
-- X68000XVI 実機 + PhantomX (68030モード・ハイメモリ384MB・VDISK) + Raspberry Pi 4B + Mercury Unit V3 + PCM8PP.X
+- X68000XVI 実機 + PhantomX (68030モード・ハイメモリ384MB・VDISK・4B) + Mercury Unit V3 + PCM8PP.X
 - XEiJ (68060モード・ハイメモリ768MB・HFS) + PCM8A.X
 
 ---
