@@ -17,6 +17,8 @@ MACSデータファイルのセレクタ兼ローダです。「まくせる」�
 
 <img src='images/mcsel4.png' width='800px'/>
 
+<img src='images/mcselZ.jpeg'/>
+
 ---
 
 ## 動作環境
