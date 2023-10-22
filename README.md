@@ -214,7 +214,8 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 以下でのみ動作確認しています。
 
-- X68000XVI 実機 + PhantomX 1.02c (68030モード・ハイメモリ384MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
+- X68000XVI 実機 + PhantomX 1.03d (68030 WB・ハイメモリ768MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
+- X68000XVI 実機 + PhantomX 1.02c (68030 WT・ハイメモリ384MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
 - XEiJ (68060モード・ハイメモリ768MB・HFS) + 060turbo.sys + PCM8A.X
 - XEiJ (68030モード・ハイメモリ128MB・HFS) + TS16DRVp.X + PCM8A.X
 - X68000Z EAK 1.4.0 + PCM8A.X (for RMV)
@@ -223,6 +224,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.6.1 (2023/10/23) ... SINGLE2/SINGLE3のリピートモードの時、2回/3回リピートの後ALBUMモード同様に次に進むようにした
 * 0.6.0 (2023/10/09) ... ジョイスティック対応をオプションとした ZMDの時のPCM表記をZMDにした
 * 0.5.2 (2023/08/30) ... eキーを押すとRMVファイルの場合はED.Xを呼び出して編集できるようにした
 * 0.5.1 (2023/08/26) ... RMV ADPCM 20.8kHz/31.2kHzの表示に対応した(.p21/.p31がADPCM21/ADPCM31と表示)
