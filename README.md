@@ -225,6 +225,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.6.4 (2023/11/16) ... HVDTP.Xの呼び出しオプションのデフォルトを変更
 * 0.6.3 (2023/11/12) ... HVDTP.Xと組み合わせることでVDT/V16形式動画に対応した
 * 0.6.2 (2023/11/01) ... UART/RS232C経由で外部16bitPCM同期再生する際のPCM表示をS44RASPからREMOTEに変えた
 * 0.6.1 (2023/10/23) ... SINGLE2/SINGLE3のリピートモードの時、2回/3回リピートの後ALBUMモード同様に次に進むようにした
