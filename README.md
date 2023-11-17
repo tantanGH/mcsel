@@ -225,6 +225,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.6.5 (2023/11/17) ... S24/S32のMCSの表示対応
 * 0.6.4 (2023/11/16) ... HVDTP.Xの呼び出しオプションのデフォルトを変更
 * 0.6.3 (2023/11/12) ... HVDTP.Xと組み合わせることでVDT/V16形式動画に対応した
 * 0.6.2 (2023/11/01) ... UART/RS232C経由で外部16bitPCM同期再生する際のPCM表示をS44RASPからREMOTEに変えた
