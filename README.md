@@ -1,20 +1,21 @@
 # MCSEL.X
 
-MACS/VDT/V16/RMV Data File Selector for Human68k/X680x0
+MACS/VDT/V16/ISD/ISM/RMV Data File Selector for Human68k/X680x0
 
 ---
 
 ## About This
 
-MACS/VDT/V16/RMVデータファイルのセレクタ兼ローダです。「まくせる」と読みます（ぉ
+MACS/VDT/V16/ISD/ISM/RMV動画データファイルのセレクタ兼ローダです。
 
  - ディスクからハイメモリに高速ダイレクトロード
  - PhantomX VDISK対応
  - エミュレータのホストファイルシステム対応
  - プレイリスト対応
  - リピート再生対応
- - RAWMVP.Xと組み合わせることでRAWMV動画(.RMV)にも対応
  - HVDTP.Xと組み合わせることでVDT/V16動画にも対応
+ - HISDP.Xと組み合わせることでISD/ISM動画にも対応
+ - RAWMVP.Xと組み合わせることでRAWMV動画(.RMV)にも対応
 
 <img src='images/mcsel4.png' width='800px'/>
 
@@ -24,7 +25,7 @@ MACS/VDT/V16/RMVデータファイルのセレクタ兼ローダです。「ま�
 
 ## 動作環境
 
-MACS/VDT/V16再生の場合は PhantomX + ハイメモリ + VDISK、または エミュレータ + ハイメモリ + ホストファイルシステムを想定しています。
+MACS/VDT/V16/ISD/ISM再生の場合は PhantomX + ハイメモリ + VDISK、または エミュレータ + ハイメモリ + ホストファイルシステムを想定しています。
 ハイメモリは必須となります。SASI/SCSIディスクは非対応です。
 
 RMV再生の場合は X68000Z 1.3.1以降 + HDS または エミュレータ + ホストファイルシステムを想定しています。
@@ -40,9 +41,9 @@ PhantomX 68030/68040 モードで、060turbo.sys 0.59 を使ってハイメモ�
 
 ---
 
-#### ハイメモリ (MACS/VDT/V16)
+#### ハイメモリ (MACS/VDT/V16/ISD/ISM)
 
-MACS/VDT/V16再生には060turbo方式のハイメモリ(最低128MB程度、できれば384MB以上)が必須となりますので、以下のいずれかのハイメモリドライバが必要です。
+MACS/VDT/V16/ISD/ISM再生には060turbo方式のハイメモリが必須となりますので、以下のいずれかのハイメモリドライバが必要です。
 
 1. 060turbo.sys
 
@@ -91,6 +92,13 @@ RAWMV形式動画の.RMVを再生するには [RAWMVP.X](https://github.com/tant
 #### HVDTP.X
 
 VDT/V16動画を再生するには [HVDTP.X](https://github.com/tantanGH/hvdtp) が必要です。
+パスの通ったディレクトリに導入しておいてください。
+
+---
+
+#### HISDP.X
+
+ISD/ISM動画を再生するには [HISDP.X](https://github.com/tantanGH/hisdp) が必要です。
 パスの通ったディレクトリに導入しておいてください。
 
 ---
@@ -225,6 +233,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.6.6 (2023/11/18) ... HISDP.Xと組み合わせることでISD/ISM形式動画に対応した
 * 0.6.5 (2023/11/17) ... S24/S32のMCSの表示対応
 * 0.6.4 (2023/11/16) ... HVDTP.Xの呼び出しオプションのデフォルトを変更
 * 0.6.3 (2023/11/12) ... HVDTP.Xと組み合わせることでVDT/V16形式動画に対応した
