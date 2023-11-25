@@ -6,7 +6,7 @@ MACS/VDT/V16/ISD/ISM/RMV Data File Selector for Human68k/X680x0
 
 ## About This
 
-MACS/VDT/V16/ISD/ISM/RMV動画データファイルのセレクタ兼ローダです。
+MACS/VDT/V16/ISD/ISM/ISS/RMV動画データファイルのセレクタ兼ローダです。
 
  - ディスクからハイメモリに高速ダイレクトロード
  - PhantomX VDISK対応
@@ -14,7 +14,7 @@ MACS/VDT/V16/ISD/ISM/RMV動画データファイルのセレクタ兼ローダ�
  - プレイリスト対応
  - リピート再生対応
  - HVDTP.Xと組み合わせることでVDT/V16動画にも対応
- - HISDP.Xと組み合わせることでISD/ISM動画にも対応
+ - HISDP.Xと組み合わせることでISD/ISM/ISS動画にも対応
  - RAWMVP.Xと組み合わせることでRAWMV動画(.RMV)にも対応
 
 <img src='images/mcsel4.png' width='800px'/>
@@ -25,7 +25,7 @@ MACS/VDT/V16/ISD/ISM/RMV動画データファイルのセレクタ兼ローダ�
 
 ## 動作環境
 
-MACS/VDT/V16/ISD/ISM再生の場合は PhantomX + ハイメモリ + VDISK、または エミュレータ + ハイメモリ + ホストファイルシステムを想定しています。
+MACS/VDT/V16/ISD/ISM/ISS再生の場合は PhantomX + ハイメモリ + VDISK、または エミュレータ + ハイメモリ + ホストファイルシステムを想定しています。
 ハイメモリは必須となります。SASI/SCSIディスクは非対応です。
 
 RMV再生の場合は X68000Z 1.3.1以降 + HDS または エミュレータ + ホストファイルシステムを想定しています。
@@ -41,9 +41,9 @@ PhantomX 68030/68040 モードで、060turbo.sys 0.59 を使ってハイメモ�
 
 ---
 
-#### ハイメモリ (MACS/VDT/V16/ISD/ISM)
+#### ハイメモリ (MACS/VDT/V16/ISD/ISM/ISS)
 
-MACS/VDT/V16/ISD/ISM再生には060turbo方式のハイメモリが必須となりますので、以下のいずれかのハイメモリドライバが必要です。
+MACS/VDT/V16/ISD/ISM/ISS再生には060turbo方式のハイメモリが必須となりますので、以下のいずれかのハイメモリドライバが必要です。
 
 1. 060turbo.sys
 
@@ -117,7 +117,7 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 
 以下の2つの環境変数を設定しておきます。
 
-- MCSEL_DATA_PATH ... MACS/VDT/V16/RMVデータファイルを格納してあるディレクトリ名をセミコロン(;)で区切って連結したもの。ディレクトリは再帰的にスキャンされます。
+- MCSEL_DATA_PATH ... MACS/VDT/V16/ISD/ISM/ISS/RMVデータファイルを格納してあるディレクトリ名をセミコロン(;)で区切って連結したもの。ディレクトリは再帰的にスキャンされます。
 
 - MCSEL_LIST_PATH ... プレイリストファイル(*.MCL)を格納してあるディレクトリ名。1つだけ指定可能。ディレクトリの再帰スキャンは行いません。
 
@@ -128,7 +128,7 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 
 #### プレイリストファイル(*.MCL)
 
-単にMCS/VDT/V16/RMVファイルのフルパス名を1行に1つずつ記述したテキストファイルです。
+単にMCS/VDT/V16/ISD/ISM/ISS/RMVファイルのフルパス名を1行に1つずつ記述したテキストファイルです。
 作成の方法は2通りあります。
 
 1. テキストエディタで作成
@@ -159,7 +159,7 @@ MCSELxxx.ZIP をダウンロードして、MCSEL.X をパスの通ったディ�
 
 - 1行目 ... アプリケーションのバージョン、PhantomXの場合はSoC温度、日付と時刻
 - 2行目 ... 現在選択されているプレイリスト名、現在のリピートモード、MACSDRVのバージョン、PCMドライバの種類
-- 4行目以降 ... MCS/VDT/V16/RMVファイルのリスト
+- 4行目以降 ... MCS/VDT/V16/ISD/ISM/ISS/RMVファイルのリスト
 - 下段部 ... 操作説明
 
 起動直後はプレイリスト"ALL"となっています。これは`MCSEL_DATA_PATH`で指定したディレクトリ全体からスキャンしたすべてのMCSファイルがリストされます。
@@ -197,11 +197,11 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 - SHUFFLE ... 再生終了後、リスト上のMCSデータをランダムに1回ずつ再生します。
 
-- SINGLE ... 同一MCSを無限回リピートします。
+- SINGLE ... 同一ファイルを無限回リピートします。
 
-- SINGLE2 ... 同一MCSを2回再生します。
+- SINGLE2 ... 同一ファイルを2回再生し次に進みます。
 
-- SINGLE3 ... 同一MCSを3回再生します。
+- SINGLE3 ... 同一ファイルを3回再生し次に進みます。
 
 いずれのモードであっても、`ESC`で再生キャンセルするか、`SHIFT`でロードキャンセルするとリピート動作を停止します。
 
@@ -222,7 +222,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 以下でのみ動作確認しています。
 
-- X68000XVI 実機 + PhantomX 1.03d (68030 WB・ハイメモリ768MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
+- X68000XVI 実機 + PhantomX 1.03e (68030 WB・ハイメモリ768MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
 - X68000XVI 実機 + PhantomX 1.02c (68030 WT・ハイメモリ384MB・VDISK・Raspi4B) + Mercury Unit V3 + PCM8PP.X
 - XEiJ (68060モード・ハイメモリ768MB・HFS) + 060turbo.sys + PCM8A.X
 - XEiJ (68030モード・ハイメモリ128MB・HFS) + TS16DRVp.X + PCM8A.X
@@ -233,6 +233,7 @@ NONE -> ALBUM -> SHUFFLE -> SINGLE -> SINGLE2 -> SINGLE3 -> NONE -> ... と押�
 
 ## History
 
+* 0.6.7 (2023/11/25) ... ISSファイルに対応した
 * 0.6.6 (2023/11/18) ... HISDP.Xと組み合わせることでISD/ISM形式動画に対応した
 * 0.6.5 (2023/11/17) ... S24/S32のMCSの表示対応
 * 0.6.4 (2023/11/16) ... HVDTP.Xの呼び出しオプションのデフォルトを変更
